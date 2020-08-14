@@ -1,0 +1,2 @@
+rootProject.name='Warehouse Inventory App'
+include ':app'

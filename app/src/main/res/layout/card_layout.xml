@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    android:foreground="?selectableItemBackground"
+    card_view:cardBackgroundColor="@android:color/holo_blue_dark"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="157dp">
+
+        <TextView
+            android:id="@+id/cardlbl_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quantity"
+            card_view:layout_constraintBottom_toTopOf="@+id/cardlbl_cost"
+            card_view:layout_constraintEnd_toStartOf="@id/guideline2"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="@+id/guideline3"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardlbl_itemName" />
+
+        <TextView
+            android:id="@+id/cardlbl_itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_name"
+            card_view:layout_constraintBottom_toTopOf="@+id/cardlbl_quantity"
+            card_view:layout_constraintEnd_toStartOf="@id/guideline2"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@id/guideline3"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardlbl_itemId" />
+
+        <TextView
+            android:id="@+id/cardlbl_frozenItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/frozen_item"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@id/guideline2"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="@+id/guideline3"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardlbl_description" />
+
+        <TextView
+            android:id="@+id/cardlbl_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            card_view:layout_constraintBottom_toTopOf="@+id/cardlbl_frozenItem"
+            card_view:layout_constraintEnd_toStartOf="@id/guideline2"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@id/guideline3"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardlbl_cost" />
+
+        <TextView
+            android:id="@+id/cardlbl_itemId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="itemID"
+            card_view:layout_constraintBottom_toTopOf="@+id/cardlbl_itemName"
+            card_view:layout_constraintEnd_toStartOf="@id/guideline2"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="@+id/guideline3"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cardlbl_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cost"
+            card_view:layout_constraintBottom_toTopOf="@+id/cardlbl_description"
+            card_view:layout_constraintEnd_toStartOf="@id/guideline2"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@id/guideline3"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardlbl_quantity" />
+
+        <TextView
+            android:id="@+id/carddata_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintBottom_toTopOf="@+id/carddata_description"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@id/guideline2"
+            card_view:layout_constraintTop_toBottomOf="@+id/carddata_quantity" />
+
+        <TextView
+            android:id="@+id/carddata_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintBottom_toTopOf="@+id/carddata_frozenItem"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@id/guideline2"
+            card_view:layout_constraintTop_toBottomOf="@+id/carddata_cost" />
+
+        <TextView
+            android:id="@+id/carddata_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintBottom_toTopOf="@+id/carddata_cost"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@id/guideline2"
+            card_view:layout_constraintTop_toBottomOf="@+id/carddata_itemName" />
+
+        <TextView
+            android:id="@+id/carddata_itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintBottom_toTopOf="@+id/carddata_quantity"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@id/guideline2"
+            card_view:layout_constraintTop_toBottomOf="@+id/carddata_itemId" />
+
+        <TextView
+            android:id="@+id/carddata_itemId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            card_view:layout_constraintBottom_toTopOf="@+id/carddata_itemName"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@id/guideline2"
+            card_view:layout_constraintStart_toStartOf="@+id/guideline2"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/carddata_frozenItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toEndOf="@id/guideline2"
+            card_view:layout_constraintTop_toBottomOf="@+id/carddata_description" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            card_view:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            card_view:layout_constraintGuide_percent="0.04" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
